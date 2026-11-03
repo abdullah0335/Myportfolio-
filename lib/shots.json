@@ -1,0 +1,349 @@
+{
+  "am-tradez": {
+    "full": {
+      "src": "/work/am-tradez-full.jpg",
+      "width": 1080,
+      "height": 2681
+    },
+    "hero": {
+      "src": "/work/am-tradez-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/am-tradez-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/am-tradez-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "careapex": {
+    "full": {
+      "src": "/work/careapex-full.jpg",
+      "width": 1080,
+      "height": 4006
+    },
+    "hero": {
+      "src": "/work/careapex-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/careapex-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/careapex-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "elaris-real-estate": {
+    "full": {
+      "src": "/work/elaris-real-estate-full.jpg",
+      "width": 1080,
+      "height": 5250
+    },
+    "hero": {
+      "src": "/work/elaris-real-estate-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/elaris-real-estate-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/elaris-real-estate-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "emrix-media": {
+    "hero": {
+      "src": "/work/emrix-media-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/emrix-media-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/emrix-media-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "inventory-sol": {
+    "full": {
+      "src": "/work/inventory-sol-full.jpg",
+      "width": 1080,
+      "height": 4985
+    },
+    "hero": {
+      "src": "/work/inventory-sol-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/inventory-sol-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/inventory-sol-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "lr-by-dr-ahmed": {
+    "full": {
+      "src": "/work/lr-by-dr-ahmed-full.jpg",
+      "width": 1080,
+      "height": 5250
+    },
+    "hero": {
+      "src": "/work/lr-by-dr-ahmed-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/lr-by-dr-ahmed-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/lr-by-dr-ahmed-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "magnum-properties": {
+    "full": {
+      "src": "/work/magnum-properties-full.jpg",
+      "width": 1080,
+      "height": 3166
+    },
+    "hero": {
+      "src": "/work/magnum-properties-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/magnum-properties-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/magnum-properties-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "media-sniffers": {
+    "full": {
+      "src": "/work/media-sniffers-full.jpg",
+      "width": 1080,
+      "height": 5250
+    },
+    "hero": {
+      "src": "/work/media-sniffers-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/media-sniffers-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/media-sniffers-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "mypass": {
+    "full": {
+      "src": "/work/mypass-full.jpg",
+      "width": 1080,
+      "height": 2050
+    },
+    "hero": {
+      "src": "/work/mypass-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/mypass-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/mypass-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "nixcer": {
+    "full": {
+      "src": "/work/nixcer-full.jpg",
+      "width": 1080,
+      "height": 2843
+    },
+    "hero": {
+      "src": "/work/nixcer-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/nixcer-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/nixcer-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "nouba-real-estate": {
+    "full": {
+      "src": "/work/nouba-real-estate-full.jpg",
+      "width": 1080,
+      "height": 5250
+    },
+    "hero": {
+      "src": "/work/nouba-real-estate-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/nouba-real-estate-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/nouba-real-estate-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "phone-clinix": {
+    "full": {
+      "src": "/work/phone-clinix-full.jpg",
+      "width": 1080,
+      "height": 4547
+    },
+    "hero": {
+      "src": "/work/phone-clinix-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/phone-clinix-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/phone-clinix-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "phroduck": {
+    "full": {
+      "src": "/work/phroduck-full.jpg",
+      "width": 1080,
+      "height": 2724
+    },
+    "hero": {
+      "src": "/work/phroduck-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/phroduck-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/phroduck-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "shan-and-associates": {
+    "full": {
+      "src": "/work/shan-and-associates-full.jpg",
+      "width": 1080,
+      "height": 5250
+    },
+    "hero": {
+      "src": "/work/shan-and-associates-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/shan-and-associates-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/shan-and-associates-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "skin-matters": {
+    "full": {
+      "src": "/work/skin-matters-full.jpg",
+      "width": 1080,
+      "height": 5192
+    },
+    "hero": {
+      "src": "/work/skin-matters-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/skin-matters-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/skin-matters-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "vapes-direct": {
+    "full": {
+      "src": "/work/vapes-direct-full.jpg",
+      "width": 1080,
+      "height": 4937
+    },
+    "hero": {
+      "src": "/work/vapes-direct-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/vapes-direct-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/vapes-direct-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  }
+}
