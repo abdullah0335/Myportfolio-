@@ -1,3 +1,5 @@
+import { asset } from "./site";
+
 export const PROFILE = {
   name: "Muhammad Abdullah",
   role: "Lead Web Developer",
@@ -9,7 +11,7 @@ export const PROFILE = {
   links: {
     github: "https://github.com/abdullah0335",
     linkedin: "https://www.linkedin.com/in/muhammad-abdullah-ba3b7a214/",
-    resume: "/Muhammad_Abdullah_CV.pdf",
+    resume: asset("/Muhammad_Abdullah_CV.pdf"),
   },
 };
 

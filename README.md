@@ -1,7 +1,7 @@
 # Muhammad Abdullah — Portfolio
 
 Personal portfolio of Muhammad Abdullah, Lead Web Developer.
-Live at **https://abdullah0335.github.io/**
+Live at **https://abdullah0335.github.io/Myportfolio-/**
 
 Built with Next.js 16 (static export), Tailwind CSS v4, GSAP and Lenis.
 
@@ -12,7 +12,8 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
+Open http://localhost:3000/Myportfolio-/ (the site is served under the GitHub Pages
+project path, set as `basePath` in `next.config.ts` and `SITE_URL` in `lib/site.ts`).
 
 ## Where things live
 

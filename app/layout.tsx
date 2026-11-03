@@ -3,6 +3,7 @@ import { Archivo, Space_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
 import Nav from "@/components/Nav";
+import { SITE_URL } from "@/lib/site";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -25,7 +26,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abdullah0335.github.io"),
+  // Origin only: image paths already carry the /Myportfolio- base path, and Next
+  // appends them to metadataBase's path rather than resolving them.
+  metadataBase: new URL(new URL(SITE_URL).origin),
   title: {
     default: "Muhammad Abdullah — Lead Web Developer",
     template: "%s — Muhammad Abdullah",
