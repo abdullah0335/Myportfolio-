@@ -19,12 +19,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
+      # npm install, not npm ci: the lock file is written on Windows, and npm ci on
+      # Linux rejects it over platform-only optional deps (@emnapi/*).
+      - run: npm install --no-audit --no-fund
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

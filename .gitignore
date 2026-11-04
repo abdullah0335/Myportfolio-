@@ -48,3 +48,7 @@ next-env.d.ts
 /components/sections/
 /components/Navbar.tsx
 /components/LoadingScreen.tsx
+
+# Claude Code project instructions (local only)
+/AGENTS.md
+/CLAUDE.md
