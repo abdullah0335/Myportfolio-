@@ -25,11 +25,15 @@ function jpegSize(buf) {
 
 const shots = {};
 for (const file of readdirSync(dir).sort()) {
-  const m = file.match(/^(.+)-(hero|full|mobile|thumb)\.jpg$/);
+  // <slug>-hero|full|mobile|thumb.jpg, plus <slug>-step<N>.jpg for step-by-step galleries
+  const m = file.match(/^(.+)-(hero|full|mobile|thumb|step(\d+))\.jpg$/);
   if (!m) continue;
-  const [, slug, kind] = m;
+  const [, slug, kind, step] = m;
   const { width, height } = jpegSize(readFileSync(join(dir, file)));
-  (shots[slug] ??= {})[kind] = { src: `/work/${file}`, width, height };
+  const shot = { src: `/work/${file}`, width, height };
+  const entry = (shots[slug] ??= {});
+  if (step) (entry.steps ??= [])[Number(step) - 1] = shot;
+  else entry[kind] = shot;
 }
 
 writeFileSync(join(root, "lib", "shots.json"), JSON.stringify(shots, null, 2) + "\n");

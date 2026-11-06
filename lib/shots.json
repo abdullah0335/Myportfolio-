@@ -21,6 +21,40 @@
       "height": 400
     }
   },
+  "car-booking-plugin": {
+    "hero": {
+      "src": "/work/car-booking-plugin-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/car-booking-plugin-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "steps": [
+      {
+        "src": "/work/car-booking-plugin-step1.jpg",
+        "width": 892,
+        "height": 1124
+      },
+      {
+        "src": "/work/car-booking-plugin-step2.jpg",
+        "width": 892,
+        "height": 2240
+      },
+      {
+        "src": "/work/car-booking-plugin-step3.jpg",
+        "width": 892,
+        "height": 1210
+      }
+    ],
+    "thumb": {
+      "src": "/work/car-booking-plugin-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
   "careapex": {
     "full": {
       "src": "/work/careapex-full.jpg",
@@ -320,6 +354,28 @@
     },
     "thumb": {
       "src": "/work/skin-matters-thumb.jpg",
+      "width": 640,
+      "height": 400
+    }
+  },
+  "sky-chauffeur": {
+    "full": {
+      "src": "/work/sky-chauffeur-full.jpg",
+      "width": 1080,
+      "height": 5250
+    },
+    "hero": {
+      "src": "/work/sky-chauffeur-hero.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "src": "/work/sky-chauffeur-mobile.jpg",
+      "width": 390,
+      "height": 844
+    },
+    "thumb": {
+      "src": "/work/sky-chauffeur-thumb.jpg",
       "width": 640,
       "height": 400
     }

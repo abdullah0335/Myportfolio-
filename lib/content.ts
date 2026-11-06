@@ -67,6 +67,14 @@ export type Project = {
   brief?: string;
   features?: Feature[];
   extraLinks?: { label: string; url: string }[];
+  /** "plugin" for software that isn't itself a website (default: a website). */
+  kind?: "site" | "plugin";
+  /** Label shown above the case study title (defaults to the domain). */
+  eyebrow?: string;
+  /** Slug of a closely related case study, linked from this one. */
+  related?: string;
+  /** Captions for a step-by-step screenshot gallery (lib/shots `steps`), in order. */
+  flow?: Feature[];
 };
 
 const WP = ["WordPress", "Elementor"];
@@ -582,6 +590,108 @@ const RAW: Omit<Project, "index">[] = [
       },
     ],
   },
+  {
+    slug: "sky-chauffeur",
+    name: "Sky Chauffeur",
+    domain: "sky-chauffeur.com",
+    url: "https://sky-chauffeur.com/",
+    category: "Brands & services",
+    summary:
+      "Airport transfer service for Frankfurt Airport, with fixed-price online booking on the homepage.",
+    platform: WP,
+    region: "Germany",
+    engagement: EMERALDS,
+    related: "car-booking-plugin",
+    overview:
+      "Sky Chauffeur runs private transfers to and from Frankfurt Airport at fixed prices, around the clock.",
+    brief:
+      "Let travellers book an airport transfer in a few steps, in German or English, and give each popular route its own page.",
+    features: [
+      {
+        title: "Booking on the homepage",
+        body: "My custom car booking plugin sits in the hero: trip, vehicle and details in three steps.",
+      },
+      {
+        title: "Route landing pages",
+        body: "Dedicated pages for transfers to Frankfurt from Düsseldorf, Dortmund, Mannheim, Heidelberg and Bensheim.",
+      },
+      {
+        title: "Fleet and fares",
+        body: "Economy and business classes — Vito, V Class, Business and Limousine — plus fares to other German cities.",
+      },
+      {
+        title: "Trust and contact",
+        body: "Customer reviews, a WhatsApp chat button and a 24/7 phone line in the header.",
+      },
+    ],
+  },
+  {
+    slug: "car-booking-plugin",
+    name: "Car Booking Plugin",
+    domain: "sky-chauffeur.com",
+    url: "https://sky-chauffeur.com/",
+    category: "Platforms & software",
+    kind: "plugin",
+    eyebrow: "Custom WordPress plugin",
+    summary:
+      "Custom WordPress plugin for chauffeur and airport-transfer bookings — trip, vehicle, extras and payment in one wizard.",
+    platform: ["WordPress", "Custom plugin"],
+    region: "Germany",
+    engagement: EMERALDS,
+    related: "sky-chauffeur",
+    overview:
+      "A booking plugin I built for chauffeur and airport-transfer companies. It runs the whole booking on the Sky Chauffeur homepage and is reused across client sites.",
+    brief:
+      "Replace phone-and-email bookings with a self-serve wizard that shows fares, sells extras and collects everything the driver needs.",
+    features: [
+      {
+        title: "Four trip types",
+        body: "To airport, from airport, round trip and standard transfer, with extra stops and a return date and time.",
+      },
+      {
+        title: "Fares per vehicle",
+        body: "Each vehicle's fare appears once a route is entered; the trip's distance and duration are saved with the booking.",
+      },
+      {
+        title: "Vehicle cards",
+        body: "Every class shows passenger and luggage capacity, what's included and its fare.",
+      },
+      {
+        title: "Paid extras",
+        body: "Baby, booster and child seats, a name plate (+€30) and waiting time billed per hour (€5/hr).",
+      },
+      {
+        title: "Customer details",
+        body: "Name, email, phone with country code, flight number, notes and an opt-in for WhatsApp updates.",
+      },
+      {
+        title: "Payment options",
+        body: "Cash or card on arrival, an optional card surcharge set by the operator, and terms acceptance before confirming.",
+      },
+      {
+        title: "Configurable per client",
+        body: "Brand colours, currency, rates and payment options come from the plugin settings, and the form switches between German and English.",
+      },
+      {
+        title: "Secure submission",
+        body: "Bookings are sent over AJAX and checked with a WordPress nonce.",
+      },
+    ],
+    flow: [
+      {
+        title: "Trip",
+        body: "Trip type, pickup and destination, date and time, passengers and luggage.",
+      },
+      {
+        title: "Vehicle",
+        body: "Choose a vehicle class, then add seats, a name plate or waiting time.",
+      },
+      {
+        title: "Details",
+        body: "Contact details, payment method and the booking total.",
+      },
+    ],
+  },
 ];
 
 export const PROJECTS: Project[] = RAW.map((p, i) => ({
@@ -604,8 +714,9 @@ export const COUNTRIES = new Set(
 export type Skill = { name: string; note?: string };
 export type SkillGroup = { group: string; skills: Skill[] };
 
+/** Websites (not plugins) in the portfolio built on a platform. */
 const count = (platform: string) =>
-  PROJECTS.filter((p) => p.platform?.includes(platform)).length;
+  PROJECTS.filter((p) => p.kind !== "plugin" && p.platform?.includes(platform)).length;
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {

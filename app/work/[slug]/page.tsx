@@ -38,6 +38,8 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
   if (!p) notFound();
 
   const shots = getShots(slug);
+  const related = p.related ? getProject(p.related) : undefined;
+  const steps = (shots.steps ?? []).map((shot, i) => ({ shot, caption: p.flow?.[i] }));
   const pos = CASE_STUDIES.findIndex((c) => c.slug === slug);
   const prev = CASE_STUDIES[(pos - 1 + CASE_STUDIES.length) % CASE_STUDIES.length];
   const next = CASE_STUDIES[(pos + 1) % CASE_STUDIES.length];
@@ -70,7 +72,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
           </span>
         </div>
 
-        <p className="mono-label text-acid">{p.domain}</p>
+        <p className="mono-label text-acid">{p.eyebrow ?? p.domain}</p>
         <h1 className="display mt-3 text-[15vw] text-paper sm:text-[10vw]">{p.name}</h1>
         <p className="mt-8 max-w-2xl font-body text-lg leading-relaxed text-paper-dim sm:text-xl">
           {p.overview ?? p.summary}
@@ -94,6 +96,14 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
             >
               Visit {p.domain} ↗
             </a>
+            {related && (
+              <Link
+                href={`/work/${related.slug}`}
+                className="mono-label rounded-full border border-line px-5 py-3 text-paper transition-colors hover:border-acid hover:text-acid"
+              >
+                {p.kind === "plugin" ? `Live on ${related.name}` : `Built with the ${related.name}`} →
+              </Link>
+            )}
             {p.extraLinks?.map((l) => (
               <a
                 key={l.url}
@@ -155,14 +165,57 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
         )}
       </section>
 
+      {/* Step-by-step flow (e.g. the booking wizard), in order */}
+      {steps.length > 0 && (
+        <section aria-labelledby="flow-title" className="px-5 pb-20 sm:px-8 sm:pb-28">
+          <div className="mb-10 grid gap-4 border-t border-line pt-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+            <h2 id="flow-title" className="mono-label text-muted">
+              Step by step
+            </h2>
+            <p className="font-body text-lg leading-relaxed text-paper-dim">
+              The {steps.length}-step flow as it runs on {p.domain}.
+            </p>
+          </div>
+          <ol className="grid items-start gap-10 md:grid-cols-3 md:gap-6">
+            {steps.map(({ shot, caption }, i) => (
+              <li key={shot.src}>
+                <p className="mono-label text-acid">
+                  Step {i + 1} of {steps.length}
+                </p>
+                {caption && (
+                  <>
+                    <h3 className="mt-2 font-body text-lg font-semibold text-paper">
+                      {caption.title}
+                    </h3>
+                    <p className="mt-1 min-h-[3.25rem] font-body text-sm leading-relaxed text-paper-dim">
+                      {caption.body}
+                    </p>
+                  </>
+                )}
+                <div className="mt-4 overflow-hidden rounded-xl border border-line">
+                  <Image
+                    src={shot.src}
+                    width={shot.width}
+                    height={shot.height}
+                    alt={`${p.name}, step ${i + 1}${caption ? `: ${caption.title}` : ""}`}
+                    sizes="(min-width: 768px) 32vw, 92vw"
+                    className="block h-auto w-full"
+                  />
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
       {/* Scroll-through of the full homepage */}
       {shots.full && (
         <ScrollShowcase name={p.name} domain={p.domain} full={shots.full} mobile={shots.mobile} />
       )}
 
-      {/* Mobile view for small screens (the showcase hides the phone there) */}
+      {/* Mobile view: on its own when there is no showcase, else only on small screens */}
       {shots.mobile && (
-        <div className="mx-auto max-w-[280px] px-5 pb-16 lg:hidden">
+        <div className={`mx-auto max-w-[280px] px-5 pb-16 ${shots.full ? "lg:hidden" : ""}`}>
           <p className="mono-label mb-4 text-muted">On mobile</p>
           <PhoneFrame shot={shots.mobile} alt={`${p.name} on a phone`} />
         </div>
