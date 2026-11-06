@@ -81,7 +81,8 @@ export default function Hero({ ready = true }: { ready?: boolean }) {
         href={`mailto:${PROFILE.email}`}
         data-fade
         data-cursor
-        className="group flex flex-wrap items-center justify-between gap-3 border border-line bg-ink-soft/60 px-5 py-4 backdrop-blur-sm transition-colors hover:border-acid"
+        // right margin leaves room for the floating contact buttons
+        className="group mr-16 flex flex-wrap items-center justify-between gap-3 border border-line bg-ink-soft/60 px-5 py-4 backdrop-blur-sm transition-colors hover:border-acid sm:mr-[5.5rem]"
       >
         <span className="flex items-center gap-3">
           <span className="relative flex h-2.5 w-2.5">

@@ -3,6 +3,7 @@ import { Archivo, Space_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
 import Nav from "@/components/Nav";
+import ContactDock from "@/components/ContactDock";
 import { SITE_URL } from "@/lib/site";
 
 const archivo = Archivo({
@@ -82,6 +83,7 @@ export default function RootLayout({
         <SiteShell>
           <Nav />
           {children}
+          <ContactDock />
         </SiteShell>
       </body>
     </html>

@@ -45,13 +45,33 @@ export default function Footer() {
             Let&apos;s talk ↗
           </span>
         </a>
-        <p className="mt-6 font-body text-paper-dim">
-          {PROFILE.email}
-        </p>
+        <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-2 font-body text-paper-dim">
+          <li>
+            <a href={`mailto:${PROFILE.email}`} className="link-sweep hover:text-paper">
+              {PROFILE.email}
+            </a>
+          </li>
+          <li>
+            <a href={PROFILE.phoneHref} className="link-sweep hover:text-paper">
+              {PROFILE.phone}
+            </a>
+          </li>
+          <li>
+            <a
+              href={PROFILE.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-sweep hover:text-paper"
+            >
+              WhatsApp ↗
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* Bottom bar */}
-      <div className="flex flex-col gap-4 border-t border-line px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+      {/* extra right padding keeps the text clear of the floating contact buttons */}
+      <div className="flex flex-col gap-4 border-t border-line px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:pl-8 sm:pr-32">
         <span className="mono-label text-muted">
           © {year} {PROFILE.name}
         </span>

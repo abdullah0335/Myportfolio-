@@ -6,6 +6,11 @@ export const PROFILE = {
   location: "Pakistan · remote worldwide",
   tagline: "WordPress · Shopify · React · Node",
   email: "m.abdullah.abs@gmail.com",
+  phone: "+92 310 5846634",
+  phoneHref: "tel:+923105846634",
+  whatsapp:
+    "https://wa.me/923105846634?text=" +
+    encodeURIComponent("Hi Muhammad, I saw your portfolio and would like to talk about a project."),
   blurb:
     "Lead web developer with 3.5+ years and 250+ production websites — WordPress, Shopify and full-stack builds for e-commerce, real estate, healthcare and media.",
   links: {

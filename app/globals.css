@@ -100,6 +100,16 @@
   animation: marquee 28s linear infinite;
 }
 
+/* Contact dock: fade up once the intro loader has lifted */
+@keyframes dock-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.dock-in { animation: dock-in 0.6s cubic-bezier(0.19, 1, 0.22, 1) 2.8s both; }
+@media (prefers-reduced-motion: reduce) {
+  .dock-in { animation: none; }
+}
+
 /* Blink */
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
 .blink { animation: blink 1.4s steps(1) infinite; }
