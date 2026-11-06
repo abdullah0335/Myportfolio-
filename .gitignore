@@ -52,3 +52,6 @@ next-env.d.ts
 # Claude Code project instructions (local only)
 /AGENTS.md
 /CLAUDE.md
+
+# screenshot capture report
+/public/work/report.json
